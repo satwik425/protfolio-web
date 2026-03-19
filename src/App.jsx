@@ -140,7 +140,7 @@ const projects = [
     "Animated probability distribution chart for all 10 digits",
     "Responsive dark/light UI with session history & analytics page",
   ],
-  live: "#",
+  live: "https://digit-recognizer-five.vercel.app/",
   repo: "https://github.com/satwik425/digit-recognizer-",
 },
 ];
