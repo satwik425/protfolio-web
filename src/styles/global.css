@@ -1,0 +1,183 @@
+/* ─── Design Tokens & Reset ─────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400;1,700&family=Syne:wght@400;500;600;700;800&display=swap');
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --yellow:      #f5c842;
+  --yellow-dark: #d4a017;
+  --yellow-soft: rgba(245,200,66,0.13);
+  --cream:       #fdfaf3;
+  --ink:         #1a1508;
+  --gray:        #7a7060;
+  --card-bg:     rgba(253,250,243,0.84);
+  --border:      rgba(255,255,255,0.82);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Syne', sans-serif;
+  overflow-x: hidden;
+  color: var(--ink);
+}
+
+/* ─── animated grain overlay ─── */
+body::before {
+  content: '';
+  position: fixed; inset: -50%;
+  width: 200%; height: 200%;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.06'/%3E%3C/svg%3E");
+  opacity: 0.18;
+  pointer-events: none; z-index: 0;
+  animation: grainShift 0.8s steps(2) infinite;
+}
+
+@keyframes grainShift {
+  0%   { transform: translate(0,0); }
+  25%  { transform: translate(-2%,-3%); }
+  50%  { transform: translate(3%,1%); }
+  75%  { transform: translate(-1%,4%); }
+  100% { transform: translate(2%,-2%); }
+}
+
+/* ─── Ambient blobs ─── */
+.blob {
+  position: fixed; border-radius: 50%;
+  filter: blur(80px); pointer-events: none; z-index: 0;
+}
+
+/* ─── Page wrapper ─── */
+.page-wrapper {
+  position: relative; z-index: 1;
+  padding-top: 80px;
+}
+
+/* ─── Section shell ─── */
+.section {
+  min-height: 100vh;
+  display: flex; align-items: center; justify-content: center;
+  padding: 80px 24px;
+}
+
+.container {
+  max-width: 1040px; width: 100%;
+}
+
+/* ─── Glass card base ─── */
+.glass-card {
+  background: var(--card-bg);
+  backdrop-filter: blur(28px) saturate(1.4);
+  -webkit-backdrop-filter: blur(28px) saturate(1.4);
+  border-radius: 32px;
+  border: 1px solid var(--border);
+  position: relative; overflow: hidden;
+  will-change: transform;
+}
+.glass-card::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0; height: 42%;
+  border-radius: 32px 32px 60% 60% / 32px 32px 30px 30px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.52) 0%, transparent 100%);
+  pointer-events: none;
+}
+
+/* ─── Shared section heading elements ─── */
+.section-tag {
+  display: inline-flex; align-items: center; gap: 7px;
+  font-size: 0.68rem; font-weight: 700;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--yellow-dark);
+  background: rgba(212,160,23,0.10);
+  border: 1px solid rgba(212,160,23,0.22);
+  border-radius: 999px; padding: 5px 14px;
+  margin-bottom: 16px;
+}
+.tag-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--yellow-dark); }
+
+.section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  font-weight: 700; line-height: 1.1;
+  color: var(--ink); letter-spacing: -0.01em;
+  margin-bottom: 18px;
+}
+.section-title em { font-style: italic; color: var(--yellow-dark); }
+
+/* ─── Shared buttons ─── */
+.btn-primary {
+  font-family: 'Syne', sans-serif;
+  font-size: 0.8rem; font-weight: 700;
+  letter-spacing: 0.06em; text-transform: uppercase;
+  color: var(--ink); background: var(--yellow);
+  border: none; border-radius: 999px;
+  padding: 11px 28px; cursor: pointer;
+  box-shadow:
+    0 2px 0 var(--yellow-dark),
+    0 6px 20px rgba(212,160,23,0.35),
+    inset 0 1px 0 rgba(255,255,255,0.5);
+  transition: transform 0.15s, box-shadow 0.15s;
+  text-decoration: none; display: inline-block;
+}
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 4px 0 var(--yellow-dark),
+    0 12px 28px rgba(212,160,23,0.45),
+    inset 0 1px 0 rgba(255,255,255,0.5);
+}
+.btn-primary:active { transform: translateY(1px); box-shadow: 0 1px 0 var(--yellow-dark); }
+
+.btn-ghost {
+  font-family: 'Syne', sans-serif;
+  font-size: 0.8rem; font-weight: 600;
+  letter-spacing: 0.04em; color: var(--gray);
+  background: none; border: 1px solid rgba(122,112,96,0.32);
+  border-radius: 999px; padding: 10px 22px;
+  cursor: pointer; transition: color 0.2s, border-color 0.2s, background 0.2s;
+  text-decoration: none; display: inline-block;
+}
+.btn-ghost:hover {
+  color: var(--ink);
+  border-color: var(--yellow-dark);
+  background: rgba(212,160,23,0.06);
+}
+
+/* ─── Shared CTA row ─── */
+.cta-row { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+
+/* ─── Float animations ─── */
+@keyframes float0 { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
+@keyframes float1 { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-6px)} }
+@keyframes float2 { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-10px)} }
+.float0 { animation: float0 4.2s ease-in-out infinite; }
+.float1 { animation: float1 5.1s ease-in-out infinite 0.8s; }
+.float2 { animation: float2 3.8s ease-in-out infinite 1.6s; }
+
+/* ─── Fade-up entrance animations ─── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.fade-in { opacity: 0; }
+.fade-in.visible { animation: fadeUp 0.65s ease both; }
+.fade-1 { animation-delay: 0.1s; }
+.fade-2 { animation-delay: 0.22s; }
+.fade-3 { animation-delay: 0.36s; }
+.fade-4 { animation-delay: 0.5s; }
+.fade-5 { animation-delay: 0.64s; }
+
+/* ─── Site footer ─── */
+.site-footer {
+  position: relative; z-index: 1;
+  text-align: center;
+  padding: 28px 24px 36px;
+  font-size: 0.72rem; color: var(--gray);
+  letter-spacing: 0.04em;
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 760px) {
+  .section { padding: 60px 16px; }
+  .nav-links { gap: 1rem; }
+}

@@ -1,0 +1,2 @@
+/* All global styles are injected by App.jsx via <style> tag */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
