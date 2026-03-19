@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import amberTexture from "./assets/amber_texture.png";
 import "./App.css";
+import demoVideo from "./assets/video.mp4";
 
 /* ─────────────────────────────────────────
    TEXTURE INJECT
@@ -91,7 +92,7 @@ const projects = [
       "Persistent message storage with SQLite",
       "Responsive UI with React & component-based architecture",
     ],
-    live: "#",
+    live: "https://chat-app-zeta-self.vercel.app/",
     repo: "https://github.com/satwik425/chat-app",
   },
   {
@@ -107,7 +108,7 @@ const projects = [
       "Debugging & code optimization",
       "Creative problem-solving & project management",
     ],
-    live: "#",
+    live: demoVideo,
     repo: "https://github.com/satwik425/ASTROIDS1",
   },
   {
@@ -123,9 +124,25 @@ const projects = [
       "Asynchronous programming with fetch & async/await",
       "Category filtering & search functionality",
     ],
-    live: "#",
+    live: "https://news-app-teal-eight.vercel.app/",
     repo: "https://github.com/satwik425/news-app",
   },
+  {
+  emoji: "🔢",
+  title: "Handwritten Digit Recognizer",
+  description:
+    "A full-stack AI-powered digit recognition app where users draw digits (0–9) on a canvas and a trained CNN model predicts them in real time with confidence scores, probability charts, and session history.",
+  tech: ["React", "FastAPI", "TensorFlow", "Python"],
+  skills: [
+    "CNN model training on MNIST dataset with 99%+ accuracy",
+    "Real-time digit prediction via FastAPI REST API",
+    "Interactive canvas with undo/redo and brush size control",
+    "Animated probability distribution chart for all 10 digits",
+    "Responsive dark/light UI with session history & analytics page",
+  ],
+  live: "#",
+  repo: "https://github.com/satwik425/digit-recognizer-",
+},
 ];
 
 const contactLinks = [
