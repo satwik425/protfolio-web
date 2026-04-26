@@ -20,7 +20,7 @@ const heroSkills = ["React", "DSA", "Python", "AI/ML", "Node.js", "SQL"];
 
 const heroBars = [
   { label: "Web Dev", pct: 88 },
-  { label: "DSA",     pct: 74 },
+  { label: "DSA", pct: 74 },
   { label: "AI / ML", pct: 62 },
 ];
 
@@ -28,57 +28,75 @@ const skillGroups = [
   {
     title: "Frontend",
     skills: [
-      { name: "React.js",   pct: 90 },
+      { name: "React.js", pct: 90 },
       { name: "JavaScript", pct: 85 },
       { name: "HTML / CSS", pct: 92 },
-      { name: "Tailwind",   pct: 78 },
+      { name: "Tailwind", pct: 78 },
     ],
   },
   {
     title: "Backend",
     skills: [
       { name: "Node.js / Express", pct: 75 },
-      { name: "Python",            pct: 80 },
-      { name: "SQL / MongoDB",     pct: 70 },
-      { name: "REST APIs",         pct: 82 },
+      { name: "Python", pct: 80 },
+      { name: "SQL / MongoDB", pct: 70 },
+      { name: "REST APIs", pct: 82 },
     ],
   },
   {
     title: "CS Fundamentals",
     skills: [
       { name: "Data Structures", pct: 78 },
-      { name: "Algorithms",      pct: 72 },
-      { name: "System Design",   pct: 58 },
-      { name: "OOP",             pct: 82 },
+      { name: "Algorithms", pct: 72 },
+      { name: "System Design", pct: 58 },
+      { name: "OOP", pct: 82 },
     ],
   },
   {
     title: "AI / ML",
     skills: [
-      { name: "Machine Learning", pct: 65 },
-      { name: "Deep Learning",    pct: 55 },
-      { name: "Data Analysis",    pct: 70 },
-      { name: "scikit-learn",     pct: 60 },
+      { name: "Machine Learning", pct: 20 },
+      { name: "Deep Learning", pct: 25 },
+      { name: "Data Analysis", pct: 20 },
+      { name: "scikit-learn", pct: 20 },
     ],
   },
 ];
 
 const techChips = [
-  "Git", "GitHub", "VS Code", "Linux", 
-  "Figma", "Docker", "Vercel", "Firebase", "Pandas",
-  "NumPy",  "C++", "Java",
+  "Git", "GitHub", "VS Code", "Linux", "React",
+  "Figma", "Postman", "Vercel", "Node.js", "Python",
+  "NumPy", "MongoDB", "C++", "Java", "AWS"
 ];
 
 const aboutInfo = [
-  { key: "Name",       val: "Satwik Shekhar" },
+  { key: "Name", val: "Satwik Shekhar" },
   { key: "University", val: "KIIT University" },
-  { key: "Degree",     val: "B.Tech CSE" },
-  { key: "Year",       val: "2nd Year" },
-  { key: "Location",   val: "Bhubaneswar, India" },
-  { key: "Status",     val: "Open to Internships" },
+  { key: "Degree", val: "B.Tech CSE" },
+  { key: "Year", val: "2nd Year" },
+  { key: "Location", val: "Bhubaneswar, India" },
+  { key: "Status", val: "Open to Internships" },
 ];
 
 const projects = [
+  {
+    emoji: "🖼️",
+    title: "Image Sharing Feed App",
+    description:
+      "A full-stack web application that allows users to upload images with captions, store them securely, and display posts in a dynamic feed. Built with a React (Vite) frontend and a Node.js/Express backend connected to MongoDB, with ImageKit integration for optimized image handling.",
+    tech: ["React (Vite)", "Node.js / Express", "MongoDB", "ImageKit"],
+    skills: [
+      "RESTful API design with Express.js",
+      "Schema modeling & CRUD operations using Mongoose",
+      "Secure image upload & delivery with ImageKit",
+      "Environment variable management with dotenv & GitHub workflow",
+      "Frontend routing & state management with React Router",
+      "API integration with Axios for seamless frontend-backend communication",
+      "Responsive UI layout with CSS (Flexbox & positioning)",
+    ],
+    live: "",
+    repo: "https://github.com/satwik425/feed-",
+  },
   {
     emoji: "💬",
     title: "Real-Time Chat App",
@@ -94,6 +112,44 @@ const projects = [
     ],
     live: "https://chat-app-zeta-self.vercel.app/",
     repo: "https://github.com/satwik425/chat-app",
+  },
+
+  {
+    emoji: "🛒",
+    title: "E‑Commerce Web App",
+    description:
+      "A modern e‑commerce web application built with React and Vite, featuring a responsive Tailwind CSS UI, dynamic product listings, shopping cart functionality, and seamless navigation across pages using React Router. The app leverages React hooks extensively for state management, side effects, and context, ensuring a smooth and interactive user experience.",
+    tech: ["React (Vite)", "Tailwind CSS", "React Router", "JavaScript (ES6+)"],
+    skills: [
+      "Component-based architecture with React",
+      "Responsive design using Tailwind CSS utility classes",
+      "Routing and navigation with React Router",
+      "State management using useState, useReducer, and Context API",
+      "Side effects and data fetching with useEffect",
+      "Reusable custom hooks for form handling and cart logic",
+      "Dynamic product rendering and filtering",
+      "Interactive shopping cart with add/remove/update functionality",
+      "Clean project setup and fast builds with Vite",
+    ],
+    live: "",
+    repo: "https://github.com/satwik425/e-commerce-_frontend",
+  },
+
+  {
+    emoji: "🔢",
+    title: "Handwritten Digit Recognizer",
+    description:
+      "A full-stack AI-powered digit recognition app where users draw digits (0–9) on a canvas and a trained CNN model predicts them in real time with confidence scores, probability charts, and session history.",
+    tech: ["React", "FastAPI", "TensorFlow", "Python"],
+    skills: [
+      "CNN model training on MNIST dataset with 99%+ accuracy",
+      "Real-time digit prediction via FastAPI REST API",
+      "Interactive canvas with undo/redo and brush size control",
+      "Animated probability distribution chart for all 10 digits",
+      "Responsive dark/light UI with session history & analytics page",
+    ],
+    live: "https://digit-recognizer-five.vercel.app/",
+    repo: "https://github.com/satwik425/digit-recognizer-",
   },
   {
     emoji: "🚀",
@@ -127,22 +183,6 @@ const projects = [
     live: "https://news-app-teal-eight.vercel.app/",
     repo: "https://github.com/satwik425/news-app",
   },
-  {
-  emoji: "🔢",
-  title: "Handwritten Digit Recognizer",
-  description:
-    "A full-stack AI-powered digit recognition app where users draw digits (0–9) on a canvas and a trained CNN model predicts them in real time with confidence scores, probability charts, and session history.",
-  tech: ["React", "FastAPI", "TensorFlow", "Python"],
-  skills: [
-    "CNN model training on MNIST dataset with 99%+ accuracy",
-    "Real-time digit prediction via FastAPI REST API",
-    "Interactive canvas with undo/redo and brush size control",
-    "Animated probability distribution chart for all 10 digits",
-    "Responsive dark/light UI with session history & analytics page",
-  ],
-  live: "https://digit-recognizer-five.vercel.app/",
-  repo: "https://github.com/satwik425/digit-recognizer-",
-},
 ];
 
 const contactLinks = [
@@ -204,8 +244,8 @@ function GlassCard({ children, className = "", style: extraStyle = {} }) {
     const el = ref.current;
     if (!el) return;
     const r = el.getBoundingClientRect();
-    const dx = (e.clientX - (r.left + r.width  / 2)) / (r.width  / 2);
-    const dy = (e.clientY - (r.top  + r.height / 2)) / (r.height / 2);
+    const dx = (e.clientX - (r.left + r.width / 2)) / (r.width / 2);
+    const dy = (e.clientY - (r.top + r.height / 2)) / (r.height / 2);
     setTilt({ x: dy * -4, y: dx * 4 });
   };
 
@@ -256,23 +296,23 @@ function SkillBarItem({ name, pct, delay = 0 }) {
 
 function ReactiveBackground() {
   const canvasRef = useRef(null);
-  const pointer   = useRef({ x: -9999, y: -9999 });
-  const raf       = useRef(null);
-  const timeRef   = useRef(0);
-  const hexes     = useRef([]);
-  const ripples   = useRef([]);
-  const embers    = useRef([]);
+  const pointer = useRef({ x: -9999, y: -9999 });
+  const raf = useRef(null);
+  const timeRef = useRef(0);
+  const hexes = useRef([]);
+  const ripples = useRef([]);
+  const embers = useRef([]);
 
   useEffect(() => {
     const canvas = canvasRef.current;
-    const ctx    = canvas.getContext("2d");
+    const ctx = canvas.getContext("2d");
     let W, H;
 
     /* ── Hex geometry ── */
-    const HEX_R  = 26;                          // hex radius (centre → vertex)
-    const HEX_W  = HEX_R * 2;
-    const HEX_H  = Math.sqrt(3) * HEX_R;
-    const COL_W  = HEX_W * 0.75;               // horizontal step
+    const HEX_R = 26;                          // hex radius (centre → vertex)
+    const HEX_W = HEX_R * 2;
+    const HEX_H = Math.sqrt(3) * HEX_R;
+    const COL_W = HEX_W * 0.75;               // horizontal step
 
     /* ── Draw a flat-top hexagon path ── */
     function hexPath(x, y, r) {
@@ -298,9 +338,9 @@ function ReactiveBackground() {
           // each hex gets a unique noise phase for organic breathing
           hexes.current.push({
             x, y,
-            phase : Math.random() * Math.PI * 2,
-            speed : 0.28 + Math.random() * 0.45,
-            glow  : 0,      // 0–1, set when pointer is near
+            phase: Math.random() * Math.PI * 2,
+            speed: 0.28 + Math.random() * 0.45,
+            glow: 0,      // 0–1, set when pointer is near
           });
         }
       }
@@ -309,14 +349,14 @@ function ReactiveBackground() {
     /* ── Ember particle helpers ── */
     function spawnEmber(anywhere = false) {
       return {
-        x     : Math.random() * W,
-        y     : anywhere ? Math.random() * H : H + 8,
-        vx    : (Math.random() - 0.5) * 0.55,
-        vy    : -(0.35 + Math.random() * 0.9),
-        life  : 0.6 + Math.random() * 0.4,
-        decay : 0.0018 + Math.random() * 0.003,
-        r     : 0.9 + Math.random() * 2.2,
-        hue   : 22 + Math.random() * 38,
+        x: Math.random() * W,
+        y: anywhere ? Math.random() * H : H + 8,
+        vx: (Math.random() - 0.5) * 0.55,
+        vy: -(0.35 + Math.random() * 0.9),
+        life: 0.6 + Math.random() * 0.4,
+        decay: 0.0018 + Math.random() * 0.003,
+        r: 0.9 + Math.random() * 2.2,
+        hue: 22 + Math.random() * 38,
       };
     }
 
@@ -326,7 +366,7 @@ function ReactiveBackground() {
 
     /* ── Resize ── */
     function build() {
-      W = canvas.width  = window.innerWidth;
+      W = canvas.width = window.innerWidth;
       H = canvas.height = window.innerHeight;
       buildHexes();
       buildEmbers();
@@ -337,7 +377,7 @@ function ReactiveBackground() {
     ══════════════════════════════════════ */
     function draw(ts) {
       timeRef.current = ts * 0.001;
-      const t  = timeRef.current;
+      const t = timeRef.current;
       const px = pointer.current.x;
       const py = pointer.current.y;
 
@@ -345,19 +385,19 @@ function ReactiveBackground() {
 
       /* ── 1. Warm gradient base ── */
       const bg = ctx.createLinearGradient(0, 0, W * 0.7, H);
-      bg.addColorStop(0,    "#fde68a");
+      bg.addColorStop(0, "#fde68a");
       bg.addColorStop(0.38, "#f59e0b");
       bg.addColorStop(0.72, "#d97706");
-      bg.addColorStop(1,    "#b45309");
+      bg.addColorStop(1, "#b45309");
       ctx.fillStyle = bg;
       ctx.fillRect(0, 0, W, H);
 
       /* ── 2. Slow drifting radial light blobs ── */
       const blobs = [
-        { bx: W*0.12 + Math.sin(t*0.29)*90,  by: H*0.18 + Math.cos(t*0.23)*60,  r: 310, c: "rgba(255,255,255,0.14)" },
-        { bx: W*0.85 + Math.cos(t*0.19)*80,  by: H*0.78 + Math.sin(t*0.17)*65,  r: 270, c: "rgba(120,50,0,0.16)" },
-        { bx: W*0.5  + Math.sin(t*0.14)*130, by: H*0.42 + Math.cos(t*0.21)*85,  r: 340, c: "rgba(255,220,70,0.09)" },
-        { bx: W*0.9  + Math.sin(t*0.33)*45,  by: H*0.12 + Math.cos(t*0.27)*38,  r: 190, c: "rgba(255,255,255,0.08)" },
+        { bx: W * 0.12 + Math.sin(t * 0.29) * 90, by: H * 0.18 + Math.cos(t * 0.23) * 60, r: 310, c: "rgba(255,255,255,0.14)" },
+        { bx: W * 0.85 + Math.cos(t * 0.19) * 80, by: H * 0.78 + Math.sin(t * 0.17) * 65, r: 270, c: "rgba(120,50,0,0.16)" },
+        { bx: W * 0.5 + Math.sin(t * 0.14) * 130, by: H * 0.42 + Math.cos(t * 0.21) * 85, r: 340, c: "rgba(255,220,70,0.09)" },
+        { bx: W * 0.9 + Math.sin(t * 0.33) * 45, by: H * 0.12 + Math.cos(t * 0.27) * 38, r: 190, c: "rgba(255,255,255,0.08)" },
       ];
       blobs.forEach(({ bx, by, r, c }) => {
         const g = ctx.createRadialGradient(bx, by, 0, bx, by, r);
@@ -371,8 +411,8 @@ function ReactiveBackground() {
       const REACH = 185;
 
       hexes.current.forEach(h => {
-        const dx   = h.x - px;
-        const dy   = h.y - py;
+        const dx = h.x - px;
+        const dy = h.y - py;
         const dist = Math.sqrt(dx * dx + dy * dy);
         const prox = Math.max(0, 1 - dist / REACH);   // 0 far → 1 near
 
@@ -380,7 +420,7 @@ function ReactiveBackground() {
         h.glow += (prox - h.glow) * 0.12;
 
         const pulse = Math.sin(t * h.speed + h.phase) * 0.5 + 0.5;
-        const r     = HEX_R * (0.91 + h.glow * 0.13) - 1.5; // slight size boost near cursor
+        const r = HEX_R * (0.91 + h.glow * 0.13) - 1.5; // slight size boost near cursor
         const alpha = 0.04 + pulse * 0.045 + h.glow * 0.30;
 
         hexPath(h.x, h.y, r);
@@ -397,9 +437,9 @@ function ReactiveBackground() {
             h.x - r * 0.25, h.y - r * 0.28, 0,
             h.x, h.y, r
           );
-          shine.addColorStop(0,   `rgba(255,255,255,${h.glow * 0.28})`);
+          shine.addColorStop(0, `rgba(255,255,255,${h.glow * 0.28})`);
           shine.addColorStop(0.5, `rgba(255,200,40,${h.glow * 0.10})`);
-          shine.addColorStop(1,   "transparent");
+          shine.addColorStop(1, "transparent");
           ctx.fillStyle = shine;
           hexPath(h.x, h.y, r);
           ctx.fill();
@@ -407,7 +447,7 @@ function ReactiveBackground() {
 
         /* stroke */
         ctx.strokeStyle = `rgba(160,85,0,${alpha})`;
-        ctx.lineWidth   = 0.65 + h.glow * 1.6;
+        ctx.lineWidth = 0.65 + h.glow * 1.6;
         hexPath(h.x, h.y, r);
         ctx.stroke();
       });
@@ -415,16 +455,16 @@ function ReactiveBackground() {
       /* ── 4. Pointer glow aura ── */
       if (px > 0) {
         const aura = ctx.createRadialGradient(px, py, 0, px, py, 170);
-        aura.addColorStop(0,   "rgba(255,255,255,0.20)");
-        aura.addColorStop(0.45,"rgba(251,191,36,0.13)");
-        aura.addColorStop(1,   "transparent");
+        aura.addColorStop(0, "rgba(255,255,255,0.20)");
+        aura.addColorStop(0.45, "rgba(251,191,36,0.13)");
+        aura.addColorStop(1, "transparent");
         ctx.fillStyle = aura;
         ctx.fillRect(0, 0, W, H);
 
         const core = ctx.createRadialGradient(px, py, 0, px, py, 42);
-        core.addColorStop(0,   "rgba(255,255,255,0.38)");
-        core.addColorStop(0.65,"rgba(253,224,71,0.16)");
-        core.addColorStop(1,   "transparent");
+        core.addColorStop(0, "rgba(255,255,255,0.38)");
+        core.addColorStop(0.65, "rgba(253,224,71,0.16)");
+        core.addColorStop(1, "transparent");
         ctx.fillStyle = core;
         ctx.fillRect(0, 0, W, H);
       }
@@ -432,35 +472,35 @@ function ReactiveBackground() {
       /* ── 5. Ripple rings (click / tap) ── */
       ripples.current = ripples.current.filter(rp => rp.life > 0);
       ripples.current.forEach(rp => {
-        rp.r    += 4;
+        rp.r += 4;
         rp.life -= 0.024;
         ctx.beginPath();
         ctx.arc(rp.x, rp.y, rp.r, 0, Math.PI * 2);
         ctx.strokeStyle = `rgba(253,224,71,${rp.life * 0.65})`;
-        ctx.lineWidth   = 1.8;
+        ctx.lineWidth = 1.8;
         ctx.stroke();
 
         ctx.beginPath();
         ctx.arc(rp.x, rp.y, rp.r * 0.58, 0, Math.PI * 2);
         ctx.strokeStyle = `rgba(255,255,255,${rp.life * 0.30})`;
-        ctx.lineWidth   = 0.9;
+        ctx.lineWidth = 0.9;
         ctx.stroke();
       });
 
       /* ── 6. Ember particles ── */
       embers.current.forEach((em, i) => {
-        em.x    += em.vx + Math.sin(t * 0.65 + i) * 0.28;
-        em.y    += em.vy;
+        em.x += em.vx + Math.sin(t * 0.65 + i) * 0.28;
+        em.y += em.vy;
         em.life -= em.decay;
         if (em.life <= 0 || em.y < -10) {
           embers.current[i] = spawnEmber();
           return;
         }
-        const a    = em.life * 0.9;
+        const a = em.life * 0.9;
         const glow = ctx.createRadialGradient(em.x, em.y, 0, em.x, em.y, em.r * 2.8);
-        glow.addColorStop(0,   `hsla(${em.hue},100%,76%,${a})`);
-        glow.addColorStop(0.55,`hsla(${em.hue},90%,54%,${a * 0.45})`);
-        glow.addColorStop(1,   "transparent");
+        glow.addColorStop(0, `hsla(${em.hue},100%,76%,${a})`);
+        glow.addColorStop(0.55, `hsla(${em.hue},90%,54%,${a * 0.45})`);
+        glow.addColorStop(1, "transparent");
         ctx.fillStyle = glow;
         ctx.beginPath();
         ctx.arc(em.x, em.y, em.r * 2.8, 0, Math.PI * 2);
@@ -480,7 +520,7 @@ function ReactiveBackground() {
       ctx.globalAlpha = 1;
 
       /* ── 8. Edge vignette ── */
-      const vig = ctx.createRadialGradient(W/2, H/2, H * 0.22, W/2, H/2, H * 0.88);
+      const vig = ctx.createRadialGradient(W / 2, H / 2, H * 0.22, W / 2, H / 2, H * 0.88);
       vig.addColorStop(0, "transparent");
       vig.addColorStop(1, "rgba(100,40,0,0.30)");
       ctx.fillStyle = vig;
@@ -494,18 +534,18 @@ function ReactiveBackground() {
 
     /* ── Event listeners — mouse + touch ── */
     const setPointer = (x, y) => { pointer.current = { x, y }; };
-    const clearPointer = ()    => { pointer.current = { x: -9999, y: -9999 }; };
-    const addRipple = (x, y)   => ripples.current.push({ x, y, r: 0, life: 1 });
+    const clearPointer = () => { pointer.current = { x: -9999, y: -9999 }; };
+    const addRipple = (x, y) => ripples.current.push({ x, y, r: 0, life: 1 });
 
-    const onMouseMove  = (e) => setPointer(e.clientX, e.clientY);
-    const onMouseLeave = ()  => clearPointer();
+    const onMouseMove = (e) => setPointer(e.clientX, e.clientY);
+    const onMouseLeave = () => clearPointer();
     const onMouseClick = (e) => addRipple(e.clientX, e.clientY);
 
-    const onTouchMove  = (e) => {
+    const onTouchMove = (e) => {
       const t = e.touches[0];
       setPointer(t.clientX, t.clientY);
     };
-    const onTouchEnd   = ()  => clearPointer();
+    const onTouchEnd = () => clearPointer();
     const onTouchStart = (e) => {
       const t = e.touches[0];
       setPointer(t.clientX, t.clientY);
@@ -514,23 +554,23 @@ function ReactiveBackground() {
 
     const onResize = () => build();
 
-    window.addEventListener("resize",     onResize);
-    window.addEventListener("mousemove",  onMouseMove,  { passive: true });
+    window.addEventListener("resize", onResize);
+    window.addEventListener("mousemove", onMouseMove, { passive: true });
     window.addEventListener("mouseleave", onMouseLeave);
-    window.addEventListener("click",      onMouseClick);
+    window.addEventListener("click", onMouseClick);
     window.addEventListener("touchstart", onTouchStart, { passive: true });
-    window.addEventListener("touchmove",  onTouchMove,  { passive: true });
-    window.addEventListener("touchend",   onTouchEnd);
+    window.addEventListener("touchmove", onTouchMove, { passive: true });
+    window.addEventListener("touchend", onTouchEnd);
 
     return () => {
       cancelAnimationFrame(raf.current);
-      window.removeEventListener("resize",     onResize);
-      window.removeEventListener("mousemove",  onMouseMove);
+      window.removeEventListener("resize", onResize);
+      window.removeEventListener("mousemove", onMouseMove);
       window.removeEventListener("mouseleave", onMouseLeave);
-      window.removeEventListener("click",      onMouseClick);
+      window.removeEventListener("click", onMouseClick);
       window.removeEventListener("touchstart", onTouchStart);
-      window.removeEventListener("touchmove",  onTouchMove);
-      window.removeEventListener("touchend",   onTouchEnd);
+      window.removeEventListener("touchmove", onTouchMove);
+      window.removeEventListener("touchend", onTouchEnd);
     };
   }, []);
 
@@ -538,12 +578,12 @@ function ReactiveBackground() {
     <canvas
       ref={canvasRef}
       style={{
-        position    : "fixed",
-        inset       : 0,
-        width       : "100%",
-        height      : "100%",
-        zIndex      : 0,
-        display     : "block",
+        position: "fixed",
+        inset: 0,
+        width: "100%",
+        height: "100%",
+        zIndex: 0,
+        display: "block",
         pointerEvents: "none",
       }}
     />
@@ -829,10 +869,10 @@ export default function App() {
       <TextureInjector />
       <ReactiveBackground />
 
-      <div className="blob" style={{ width: 340, height: 340, top: "-6%",  left: "-3%",  background: "rgba(255,255,255,0.18)" }} />
+      <div className="blob" style={{ width: 340, height: 340, top: "-6%", left: "-3%", background: "rgba(255,255,255,0.18)" }} />
       <div className="blob" style={{ width: 280, height: 280, bottom: "4%", right: "6%", background: "rgba(180,100,0,0.12)" }} />
-      <div className="blob" style={{ width: 200, height: 200, top: "45%",  left: "52%",  background: "rgba(255,255,255,0.09)" }} />
-      <div className="blob" style={{ width: 160, height: 160, top: "22%",  right: "18%", background: "rgba(245,200,66,0.1)" }} />
+      <div className="blob" style={{ width: 200, height: 200, top: "45%", left: "52%", background: "rgba(255,255,255,0.09)" }} />
+      <div className="blob" style={{ width: 160, height: 160, top: "22%", right: "18%", background: "rgba(245,200,66,0.1)" }} />
 
       <header className={`navbar ${scrolled ? "scrolled" : ""}`}>
         <div className="nav-inner">
