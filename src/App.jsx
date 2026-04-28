@@ -94,7 +94,7 @@ const projects = [
       "API integration with Axios for seamless frontend-backend communication",
       "Responsive UI layout with CSS (Flexbox & positioning)",
     ],
-    live: "",
+    live: "https://feed-frontend-ebon.vercel.app/create_post",
     repo: "https://github.com/satwik425/feed-",
   },
   {
@@ -131,7 +131,7 @@ const projects = [
       "Interactive shopping cart with add/remove/update functionality",
       "Clean project setup and fast builds with Vite",
     ],
-    live: "",
+    live: "https://shopping-web-lilac-delta.vercel.app/",
     repo: "https://github.com/satwik425/e-commerce-_frontend",
   },
 
