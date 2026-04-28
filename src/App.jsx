@@ -64,7 +64,7 @@ const skillGroups = [
 ];
 
 const techChips = [
-  "Git", "GitHub", "VS Code", "Linux", "React",
+  "Git", "GitHub", "Linux", "React",
   "Figma", "Postman", "Vercel", "Node.js", "Python",
   "NumPy", "MongoDB", "C++", "Java", "AWS"
 ];
